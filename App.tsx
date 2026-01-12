@@ -35,13 +35,13 @@ const App: React.FC = () => {
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-200">
-              <i className="fa-solid fa-headphones-simple text-white text-xl"></i>
+              <i className="fa-solid fa-earth-americas text-white text-xl"></i>
             </div>
             <div>
               <h1 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-slate-900 to-indigo-600 bg-clip-text text-transparent">
                 Commute Beat
               </h1>
-              <p className="text-xs text-slate-400 font-medium">매일의 출퇴근을 완성하는 선곡</p>
+              <p className="text-xs text-slate-400 font-medium">전 세계의 소리로 채우는 출퇴근길</p>
             </div>
           </div>
 
@@ -50,7 +50,7 @@ const App: React.FC = () => {
               <i className="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
               <input
                 type="text"
-                placeholder="오늘의 기분이나 장르를 입력하세요 (예: 비오는 날, 시티팝)"
+                placeholder="어떤 분위기의 음악을 전 세계에서 찾아볼까요?"
                 value={theme}
                 onChange={(e) => setTheme(e.target.value)}
                 className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all"
@@ -75,19 +75,18 @@ const App: React.FC = () => {
           <div className="flex flex-col items-center justify-center py-20 text-center">
             <div className="w-48 h-48 mb-8 relative">
                <img 
-                src="https://picsum.photos/seed/commute/400/400" 
-                alt="Commute illustration" 
-                className="rounded-3xl shadow-2xl grayscale"
+                src="https://images.unsplash.com/photo-1514525253361-bee243870eb2?auto=format&fit=crop&q=80&w=400&h=400" 
+                alt="Global Music illustration" 
+                className="rounded-3xl shadow-2xl object-cover"
               />
               <div className="absolute inset-0 bg-indigo-600/10 rounded-3xl"></div>
             </div>
-            <h2 className="text-2xl font-bold text-slate-800 mb-3">출퇴근 시간이 즐거워질 거예요.</h2>
+            <h2 className="text-2xl font-bold text-slate-800 mb-3">전 세계의 명곡들을 만나보세요.</h2>
             <p className="text-slate-500 max-w-sm">
-              원하는 음악 테마나 장르를 입력하고 오늘의 7곡을 받아보세요. 
-              한국어 음악과 해외 음악을 적절하게 섞어 추천해 드립니다.
+              한국 음악은 물론, 전 세계 다양한 국가의 숨겨진 보석 같은 음악들을 7곡씩 추천해 드립니다.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-2">
-              {['비오는 창가', '신나는 금요일', '재즈 카페', '80년대 감성', '힙합'].map((tag) => (
+              {['프랑스 샹송', '영국 브릿팝', '일본 시티팝', '브라질 보사노바', '미국 로파이'].map((tag) => (
                 <button
                   key={tag}
                   onClick={() => {
@@ -121,8 +120,8 @@ const App: React.FC = () => {
           <div className="space-y-8">
             <div className="flex items-center justify-between">
               <div>
-                <h2 className="text-2xl font-bold text-slate-800">"{theme}" 추천 리스트</h2>
-                <p className="text-sm text-slate-400 mt-1">지하철과 버스에서 듣기 좋은 7곡입니다.</p>
+                <h2 className="text-2xl font-bold text-slate-800">"{theme}" 글로벌 추천</h2>
+                <p className="text-sm text-slate-400 mt-1">세계 각국에서 선정한 오늘의 플레이리스트입니다.</p>
               </div>
               <button
                 onClick={() => handleRecommendation()}
@@ -140,7 +139,7 @@ const App: React.FC = () => {
             </div>
 
             <footer className="pt-12 pb-8 text-center text-slate-300 text-xs font-medium uppercase tracking-widest">
-              &copy; 2024 Commute Beat • Curated by Gemini
+              &copy; 2024 Commute Beat • World Music Discovery
             </footer>
           </div>
         )}
