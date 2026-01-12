@@ -1,0 +1,5 @@
+{
+  "name": "Commute Beat",
+  "description": "A daily music recommendation app tailored for commuters. Get 7 personalized song picks (70% Korean, 30% International) based on your mood or genre, complete with direct YouTube search links.",
+  "requestFramePermissions": []
+}
